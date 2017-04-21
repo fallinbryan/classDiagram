@@ -24,8 +24,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    uml_diagram.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    uml_diagram.h
 
 FORMS    += mainwindow.ui
