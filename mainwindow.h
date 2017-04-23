@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include "uml_diagram.h"
@@ -21,7 +20,12 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QVector<Uml_diagram> listOfDiagrams;
+    QVector<Uml_diagram*> listOfDiagrams;
+    QVector<QPoint> listOfDiagramOffsets;
+    QPoint startPoint;
+
+protected:
+    void paintEvent(QPaintEvent*);
 };
 
-#endif // MAINWINDOW_H
+

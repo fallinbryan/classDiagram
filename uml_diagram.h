@@ -8,18 +8,7 @@
 #include <QFile>
 
 
-QVector<QString> types = { "int",
-                           "double",
-                           "float",
-                           "bool",
-                         };
 
-bool isAType(QString string) {
-    for(int i = 0; i < types.length(); i++) {
-        if(string == types[i]) return true;
-    }
-    return false;
-}
 
 enum  parseFlags {
     processingClass =  1,
@@ -60,7 +49,7 @@ private:
     void parseFile(QFile* file);
 
 public:
-    Uml_diagram(QWidget*, QFile* file);
+    Uml_diagram(QWidget*, QFile* file, int top, int left);
     ~Uml_diagram();
     void paintDiagram(QPainter* painter);
     void moveDiagram(QPoint point);
